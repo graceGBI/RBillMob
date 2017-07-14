@@ -1,0 +1,53 @@
+<div id="home" data-page="home" class="page" ng-controller="IndexPageController" ng-init="init()">
+
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="center">RBILL</div>
+            <div class="right"><a href="#" class="open-panel link icon-only"><i class="icon icon-bars"></i></a></div>
+        </div>
+        <div class="subnavbar">
+            <a href="pages/search.html" class="item-link close-panel">
+                <input type="search" placeholder="Enseigne, Ville" />
+                <a href="#" class="searchbar-clear"></a>
+            </a>
+        </div>
+    </div>
+    <div class="page-content with-subnavbar hide-bars-on-scroll">
+        <div class="content-block-title">Welcome To RBILL APP</div>
+
+        <div class="content-block-title">Les plus populaires à proximité</div>
+        <div data-pagination=".swiper-pagination-c1" data-spaceBetween="10" data-slidesPerView="auto" data-centeredSlides="true" class="swiper-container swiper-init ks-carousel-slider ks-carousel-slider-auto">
+            <div class="swiper-pagination swiper-pagination-c1"></div>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" ng-repeat="boutique in boutiques">
+                    <div class="card ks-card-header-pic">
+                        <div style="background-image:url(http://lorempixel.com/1000/600/nature/3/)" valign="bottom" class="card-header color-white no-border">Journey To Mountains</div>
+                        <div class="card-content">
+                            <div class="card-content-inner">
+                                <p class="color-gray">Title {{boutique.company_name}}</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="content-block-title">Promotions</div>
+        <div data-pagination=".swiper-pagination-c4" data-spaceBetween="10" data-slidesPerView="auto" data-centeredSlides="true" class="swiper-container swiper-init ks-carousel-slider ks-carousel-slider-auto">
+            <div class="swiper-pagination swiper-pagination-c4"></div>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+                <div class="swiper-slide">Slide 5</div>
+                <div class="swiper-slide">Slide 6</div>
+                <div class="swiper-slide">Slide 7</div>
+                <div class="swiper-slide">Slide 8</div>
+                <div class="swiper-slide">Slide 9</div>
+                <div class="swiper-slide">Slide 10</div>
+            </div>
+        </div>
+    </div>
+</div>

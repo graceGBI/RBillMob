@@ -1,0 +1,56 @@
+<div data-page="login" class="page" ng-controller="LoginPageController">
+    <div class="page-content login-screen-content">
+        <div class="login-screen-title">Login RBILL</div>
+        <form>
+            <div class="list-block inputs-list">
+                <ul>
+                    <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title label">Email</div>
+                            <div class="item-input">
+                                <input type="email" name="username" placeholder="Your email" />
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title label">Password</div>
+                            <div class="item-input">
+                                <input type="password" name="password" placeholder="Your password" />
+                            </div>
+                            <a href="#" class="item-link">Forget ?</a>
+                        </div>
+                    </li>
+                    <li class="item-content">
+                        <div class="row">
+                            <div class="col-50">
+                                <label class="label-checkbox item-content">
+                                    <input type="checkbox" name="ks-checkbox" value="User" checked="checked"/>
+                                    <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+                                    <div class="item-inner">
+                                        <div class="item-title">User</div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="col-50">
+                                <label class="label-checkbox item-content">
+                                    <input type="checkbox" name="ks-checkbox" value="Company"/>
+                                    <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+                                    <div class="item-inner">
+                                        <div class="item-title">Company</div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="content-block">
+                <p class="buttons-row"><a href="#" class="button button-fill button-raised">Sign In</a></p>
+            </div>
+            <!-- il manque la connexion via gmail, facebook, twetter, linkedln-->
+            <div class="content-block"><a href="#" class="item-link">Don't have an account? Register</a></div>
+            <!-- register juste user-->
+        </form>
+    </div>
+</div>

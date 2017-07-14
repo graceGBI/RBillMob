@@ -1,0 +1,95 @@
+<div data-page="contact" class="page" ng-controller="ContactPageController" ng-init="init()">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="left"><a href="index.html" class="back link icon-only"><i class="icon icon-back"></i></a></div>
+            <div class="center">Contact</div>
+            <div class="right"><a href="#" class="open-panel link icon-only"><i class="icon icon-bars"></i></a></div>
+        </div>
+    </div>
+    <div class="page-content">
+        <div class="content-block-title">Votre avis est important pour nous</div>
+        <div class="content-block">
+            <p>Nous vous encourageons vivement à nous faire part de vos remarques concernant nos prestations, vos expériences dans notre service ainsi que ce site Internet.</p>
+        </div>
+        <div class="content-block-title">Que souhaiterez-vous dire ?</div>
+        <form class="list-block" name="contactForm" ng-submit="sendQuestion()">
+            <ul>
+                <li>
+                    <div class="item-content">
+                        <div class="item-inner">
+                            <div class="item-input">
+                                <select>
+                                    <option>J'ai une idée</option>
+                                    <option>Comment le service fonctionne</option>
+                                    <option>Question Général</option>
+                                    <option>Signaler un incident</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                        <div class="item-media"><i class="icon material-icons">person_outline</i></div>
+                        <div class="item-inner">
+                            <div class="item-title floating-label">Name</div>
+                            <div class="item-input">
+                                <input type="text" name="name" placeholder="Your name" ng-model="name" ng-minlength="3" ng-maxlength="30" required/>
+                            </div>
+                        </div>
+                        <div ng-messages="contactForm.name.$error" ng-messages-include="erreurs.html" ng-if="contactForm.$submitted"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                        <div class="item-media"><i class="icon material-icons">person_outline</i></div>
+                        <div class="item-inner">
+                            <div class="item-title floating-label">Firstname</div>
+                            <div class="item-input">
+                                <input type="text" placeholder="Your firstname" ng-model="firstname" ng-minlength="3" ng-maxlength="30" required/>
+                            </div>
+                            <p ng-show="contactForm.firstname.$invalid && !contactForm.firstname.$pristine" class="help-block">Veuillez indiquer votre prenom</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                        <div class="item-media"><i class="icon material-icons">email</i></div>
+                        <div class="item-inner">
+                            <div class="item-title floating-label">E-mail</div>
+                            <div class="item-input">
+                                <input type="email" placeholder="E-mail" ng-model="email" ng-minlength="7" required/>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                        <div class="item-media"><i class="icon material-icons">call</i></div>
+                        <div class="item-inner">
+                            <div class="item-title floating-label">Phone</div>
+                            <div class="item-input">
+                                <input type="tel" placeholder="" ng-model="phone" ng-minlength="10" required/>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="align-top">
+                    <div class="item-content">
+                        <div class="item-media"><i class="icon material-icons">chat_bubble_outline</i></div>
+                        <div class="item-inner">
+                            <div class="item-title floating-label">Your question</div>
+                            <div class="item-input">
+                                <textarea class="resizable" ng-model="question" ng-maxlength="100"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="content-block">
+                <p class="buttons-row"><input type="submit" value="Valider" class="button button-fill button-raised" /></p>
+            </div>
+            <!-- faire un ptit effet et afficher le message "Votre message a bien été envoyé il sera traité dans les plus bref delai" -->
+        </form>
+    </div>
+</div>

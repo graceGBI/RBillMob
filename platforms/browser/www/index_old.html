@@ -1,0 +1,114 @@
+<html ng-app="Rbill" ng-csp>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />-->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+    <!--<link rel="stylesheet" type="text/css" href="css/index.css" />-->
+    <title>Pharma Intercare</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Styles -->
+
+    <link rel="stylesheet" href="lib/framework7/framework7.material.min.css">
+    <!--<link rel="stylesheet" href="lib/framework7/framework7.min.css">-->
+    <link rel="stylesheet" href="lib/framework7/framework7.material.colors.min.css">
+    <link rel="stylesheet" href="lib/css/font-awesome.min.css">
+    <!--<link rel="stylesheet" href="lib/css/material-icons.css">-->
+
+    <!-- To add only in material template, to get transition like iOS --
+    <link rel="stylesheet" href="lib/framework7/framework7.transition.slide.css">-->
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="lib/underscore.js"></script>
+    <script type="text/javascript" src="lib/angular.min.js"></script>
+    <script data-require="angular-sanitize@*" data-semver="1.4.3" src="https://code.angularjs.org/1.4.3/angular-sanitize.js"></script>
+    <script data-require="angular-route@*" data-semver="1.4.3" src="https://code.angularjs.org/1.4.3/angular-route.js"></script>
+    <script type="text/javascript" src="lib/framework7/framework7.js"></script>
+    <script type="text/javascript" src="js/config.js"></script>
+    <script type="text/javascript" src="js/service/InitService.js"></script>
+    <script type="text/javascript" src="js/controller/MainController.js"></script>
+    <script type="text/javascript" src="js/controller/IndexPageController.js"></script>
+    <script type="text/javascript" src="js/controller/SearchPageController.js"></script>
+
+    <content src="index.html" />
+    <content src="local://simulator/pages/detail.html" />
+    <access origin="*" />
+    <access origin="mailto:*" launch-external="true" />
+    <access origin="tel:*" launch-external="true" />
+
+</head>
+
+<body class="theme-amethyst" ng-controller="MainController" ng-init="init()">
+
+    <div class="statusbar-overlay"></div>
+
+    <div class="panel-overlay"></div>
+
+    <div class="panel panel-right panel-cover">
+        <div class="content-block">
+            <p>Right panel content goes here</p>
+        </div>
+    </div>
+    <!-- Views-->
+    <div class="views">
+        <!-- Your main view, should have "view-main" class-->
+        <div class="view view-main">
+            <!-- Top Navbar-->
+            <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+            <div class="pages navbar-through toolbar-through">
+                <!-- Page, data-page contains page name-->
+                <div data-page="index" class="page" ng-controller="IndexPageController" ng-init="init()">
+                    <!-- Scrollable page content-->
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <!-- We have home navbar without left link-->
+                            <div class="center sliding">RBILL</div>
+                            <div class="right">
+                                <!-- Right link contains only icon - additional "icon-only" class-->
+                                <a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+                            </div>
+                            <div class="subnavbar">
+                                <a href="pages/search.html" class="item-link close-panel">
+                                    <input type="search" placeholder="Enseigne, Ville" />
+                                    <a href="#" class="searchbar-clear"></a>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-content with-subnavbar hide-bars-on-scroll">
+                        <div class="content-block-title">Welcome To My RBILL App</div>
+                        <div class="content-block"><a href="pages/about.html" class="button button-raised">About Framework7</a></div>
+                        <div class="content-block-title">Framework7 Kitchen Sink</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom Toolbar-->
+            <div class="toolbar">
+                <div class="toolbar-inner">
+                    <a href="index.html" class="link active">Home</a>
+                    <a href="pages/choose_us.html" class="link">choose_us</a>
+                    <a href="pages/order.html" class="link">Order</a>
+                    <a href="pages/account.html" class="link">Account</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/axelib.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+
+</html>
