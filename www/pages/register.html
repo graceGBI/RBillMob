@@ -16,7 +16,7 @@
                                 <div class="item-inner">
                                     <div class="item-title label">Name</div>
                                     <div class="item-input">
-                                        <input type="text" placeholder="Your name" />
+                                        <input type="text" placeholder="Your name" ng-model="reg_name" />
                                     </div>
                                 </div>
                             </div>
@@ -25,7 +25,7 @@
                             <div class="item-inner">
                                 <div class="item-title label">Email</div>
                                 <div class="item-input">
-                                    <input type="email" name="username" placeholder="Your email" />
+                                    <input type="email" name="username" placeholder="Your email" ng-model="reg_email" />
                                 </div>
                             </div>
                         </li>
@@ -33,7 +33,7 @@
                             <div class="item-inner">
                                 <div class="item-title label">Password</div>
                                 <div class="item-input">
-                                    <input type="password" name="password" placeholder="Your password" />
+                                    <input type="password" name="password" placeholder="Your password" ng-model="reg_pass" />
                                 </div>
                             </div>
                         </li>
@@ -41,14 +41,14 @@
                             <div class="item-inner">
                                 <div class="item-title label">Re-Password</div>
                                 <div class="item-input">
-                                    <input type="password" name="password" placeholder="Your password" />
+                                    <input type="password" name="password" placeholder="Your password" ng-model="reg_pass_2" />
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="item-content">
                                 <div class="item-inner">
-                                    <a href="#" ng-click="register_user()" class="button button-fill color-inter" style="border-radius:30px; letter-spacing:1px; height:auto;">
+                                    <a href="#" ng-click="register_user()" class="button button-fill button-raised" style="border-radius:30px; letter-spacing:1px; height:auto;">
                                         <div style="padding:1px; text-align:center;">S'inscrire</div>
                                     </a>
                                 </div>
