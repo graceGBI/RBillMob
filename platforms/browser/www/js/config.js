@@ -33,6 +33,8 @@ $$(document).on('DOMContentLoaded', function() {
     }
     app.events();
 });
+
+
 Rbill.angular = angular.module('Rbill', ['ngSanitize']);
 
 /*angular.config(function($routeProvider) {

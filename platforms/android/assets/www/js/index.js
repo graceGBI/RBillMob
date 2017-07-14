@@ -61,7 +61,7 @@ var app = {
             if (axJson != null && axJson.token != null && axJson.token.usr != null) {
                 $(".splash").hide();
                 $(".panel .panel-left").hide();
-                Rbill.fw7.view.router.loadPage('pages/home.html');
+                Rbill.fw7.views[0].router.loadPage('pages/home.html');
             } else {
                 $(".splash").hide();
             }
